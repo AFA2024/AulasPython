@@ -1,6 +1,16 @@
 import os
 os.system('cls')
 
+from tkinter import *
+from tkinter import ttk
+
+root = Tk()
+frm = ttk.Frame(root, padding=10)
+frm.grid()
+ttk.Label(frm, text="Hello World!").grid(column=0, row=0)
+ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=0)
+root.mainloop()
+
 def escolher_opcao():
     operacao = 1
     while operacao != 0:
@@ -13,6 +23,7 @@ def escolher_opcao():
         operacao = input("Digite a Operacao Desejada : ")
     
         if operacao == "0":
+            os.system('cls')
             break
 
         if operacao != "+" and operacao != "-" and operacao != "/" and operacao != "*" and operacao!= "0":
